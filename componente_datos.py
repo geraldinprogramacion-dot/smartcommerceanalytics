@@ -1,7 +1,7 @@
 #Este componente se encarga exclusivamente de la ingesta,limpieza  y validación  de datos.
 #Es el motor de datos
 import pandas as pd
-class IngestadorDatos:
+class IngestorDatos:
     """Componente independiente para la ingesta y  validacion de datos comerciales """
     def __init__(self):
         pass
