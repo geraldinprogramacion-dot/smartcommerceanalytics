@@ -15,7 +15,7 @@ class IngestorDatos:
         # acciones alternativas.
         try:  
             df = pd.read_csv(archivo, sep=None, engine='python', encoding='utf-8-sig')
-
+            df.columns = df.columns.str.strip().str.lower()
             #  Usamos sep=None y el motor de python para que pandas detecte
             # automaticamente si el archivo usa comas(,)puntos y coma (;) o tabuladores( espacio)
 
@@ -28,7 +28,7 @@ class IngestorDatos:
             df ['total_venta']=df ['cantidad']*df ['precio_unitario'] 
             return df
         except Exception as e:
-            raise IOError(f"Error al procesar el componente de datos(e)")
+            raise IOError(f"Error al procesar el componente de datos{e}")
         
-        #HOLA
+        
     
